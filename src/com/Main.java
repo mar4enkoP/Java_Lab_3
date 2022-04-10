@@ -25,22 +25,28 @@ public class Main {
      * Вывести строку, содержащую символы строки S, между которыми вставлено по N символов «*» (звездочка).
      */
     public static void Task12() {
-        String line = "Hello world";
+        String s = "Hello world";
         final int N = 5;
         if (N > 0) {
-            char[] lineArray = line.toCharArray();
-            for (int i = 0; i < lineArray.length; i++) {
-                for (int f = 0; f < N; f++) System.out.print("*");
-                System.out.print(lineArray[i]);
+            String star = "";
+            for (int f = 0; f < N; f++) {
+                star += "*";
             }
+            s = s.replace("", star);
+            System.out.println(s.substring(N, s.length()-N));
         }
     }
 
     /**
      * Task 2
+     * Даны строки S и S0. Удалить из строки S все подстроки, совпадающие с S0.
+     * Если совпадающих подстрок нет, то вывести строку S без изменений.
      */
     public static void Task35() {
-
+        final String S = "Hello world";
+        final String S0 = "llo";
+        String ans = S.replaceAll(S0, "");
+        System.out.print(ans);
     }
 
     /**
