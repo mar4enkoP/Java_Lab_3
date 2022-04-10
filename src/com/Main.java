@@ -33,7 +33,7 @@ public class Main {
                 star += "*";
             }
             s = s.replace("", star);
-            System.out.println(s.substring(N, s.length()-N));
+            System.out.println(s.substring(N, s.length() - N));
         }
     }
 
@@ -51,9 +51,12 @@ public class Main {
 
     /**
      * Task 3
+     * Дан символ C.
+     * Вывести его код (т. е. номер в кодовой таблице).
      */
     public static void Task1() {
-
+        final char C = '2';
+        System.out.println((int) C);
     }
 
     public static void main(String[] args) {
@@ -81,5 +84,4 @@ public class Main {
             }
         }
     }
-
 }
